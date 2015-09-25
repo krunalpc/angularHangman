@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Hangman Angular</title>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="personCtrl">
+
+	<p ng-hide="myVar">
+
+		Enter string: <input type=text ng-model="firstName" placeholder="Enter the string">
+		<button ng-click="toggle()">Submit</button> 
+
+	</p>
+
+	<br>
+
+	Enter Character to match with string: <input type=text ng-model="personName" placeholder="Enter single Character">
+	<button class="button" ng-click="next()">Submit</button>
+
+	<br> 
+	Result for the Entered character: {{nameResult}} 
+	<pre>{{result}}</pre>
+
+	<canvas style="border:3px solid red;" id="myCanvas" width="600" height="600" ng-model="myCanvas"></canvas>
+
+
+</div>
+
+<script type="text/javascript" src="index.js"></script> 
+
+</body>
+</html>
+
